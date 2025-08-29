@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียด: ชื่อโปรเจกต์ 1</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/RTM_logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <a href="../projects.html" class="back-link">&lt; กลับไปหน้าผลงานทั้งหมด</a>
+        <h1>Bottle Donation Machine with Recycling System</h1>
+    </header>
+
+    <main class="project-detail-container">
+        <div class="project-images">
+            <img src="../images/project1-1.png" alt="รูปโปรเจกต์ 1 รูปที่ 1">
+            <img src="../images/project1-2.jpg" alt="รูปโปรเจกต์ 1 รูปที่ 2">
+            <img src="../images/project1-3.jpg" alt="รูปโปรเจกต์ 1 รูปที่ 3">
+        </div>
+
+        <div class="project-content">
+            <section>
+                <h3>วัตถุประสงค์</h3>
+                <p>
+                    โครงงานเครื่องบริจาคขวดน้ำพร้อมระบบแปรรูป เป็นโครงงานที่จะช่วยในการแก้ปัญหาด้านการจัดการยังให้มีประสิทธิภาพมากขึ้น โครงงานนี้สามารถรับขวดน้ำพลาสติก หรือกระป๋องโลหะที่ใช้แล้วและทำการบีบอัดเพื่อให้ขวดอยู่ในสภาพที่สามารถนำไปรีไซเคิลได้ง่าย ซึ่งช่วยลดปริมาณขยะพลาสติกที่ต้องจัดการและสร้างมูลค่าจากขยะที่แปรรูป นอกจากนี้ยังส่งเสริมการรีไซเคิลแล้วเครื่องบริจาคขวดน้ำพร้อมระบบแปรรูปยังมีระบบเก็บข้อมูลผู้ใช้ จำนวนการบริจาคของผู้ใช้คนนั้นๆ ลงบน Google Sheet และแสดงผมในรูปเว็ปไซต์ที่เราได้สร้างขึ้นมา นอกจากนี้ยังสามารถดูปริมาณขยะทั้งหมดที่เก็บอยู่ในถังบน Arduino Cloud
+                </p>
+            </section>
+
+            <section>
+                <h3>กระบวนการทำงาน</h3>
+                <p>
+                    ระบบเครื่องบริจาคขวดน้ำถูกพัฒนาขึ้นเพื่อส่งเสริมการรีไซเคิลและลดปริมาณขยะ โดยมีขั้นตอนการทำงานที่ครอบคลุม เริ่มจากการรับขวดผ่านช่องรับที่สามารถตรวจสอบประเภทวัสดุของขวดได้ หลังจากนั้นผู้ใช้จะทำการยืนยันตัวตนด้วยการกรอกเลขประจำตัวนักเรียนหรือสแกนบัตร เพื่อสะสมแต้มจากการบริจาค จากนั้นขวดจะถูกส่งเข้าสู่ระบบบีบอัดเพื่อลดขนาดและประหยัดพื้นที่จัดเก็บ โดยขวดที่ถูกบีบอัดแล้วจะถูกแยกเก็บในช่องสำหรับพลาสติกและโลหะอย่างเป็นระเบียบ นอกจากนี้ ระบบยังเชื่อมต่อกับ IoT ผ่าน Arduino Cloud ทำให้สามารถติดตามและจัดการข้อมูลการบริจาคได้อย่างมีประสิทธิภาพ ทั้งนี้ การสะสมแต้มยังช่วยกระตุ้นให้ผู้คนมีส่วนร่วมในการรักษาสิ่งแวดล้อมและการรีไซเคิลมากยิ่งขึ้น
+                </p>
+            </section>
+
+            <section>
+                <h3>ส่วนประกอบ / วัสดุ</h3>
+                <ul>
+                    <li>Arduino MKR Wifi 1010</li>
+                    <li>Arduino Nano</li>
+                    <li>Protoboard</li>
+                    <li>Linear Motor</li>
+                    <li>Ir Sensor</li>
+                    <li>Servo Motor</li>
+                    <li>Inductive Sensor</li>
+                    <li>Key Matrix</li>
+                    <li>Rfid Module</li>
+                    <li>Adapter 12v</li>
+                    <li>Load Cell</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>รายละเอียดเพิ่มเติม</h3>
+                <ul>
+                    <li><a href="https://github.com/Combine1234/-Arduino-Explore-IoT-Kit-Hackathon-2024.git" target="_blank">code : https://github.com/Combine1234/-Arduino-Explore-IoT-Kit-Hackathon-2024.git</a></li>
+                    <li><a href="https://bcg-server-zql0.onrender.com/data.html" target="_blank">Website: https://bcg-server-zql0.onrender.com/data.html</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,123 +1,338 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-* {
+/* --- Global Styles --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    line-height: 1.6;
-}
-
-/* Navbar */
-nav {
-    background: #222;
-    color: #fff;
-    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
+header, footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
 }
 
-nav a:hover {
-    color: #ff9800;
-}
-
-/* Main container */
-.container {
-    max-width: 1200px;
-    margin: auto;
+main {
+    flex-grow: 1;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* Project grid */
+h2, h3 {
+    color: #007bff;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.back-link {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/* --- Header & Navigation (ตามตัวอย่างรูปภาพ) --- */
+.main-header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-image-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info h1 {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.profile-info p {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.main-nav a {
+    color: #343a40;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.main-nav a:hover {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+}
+
+/* --- About & Skills --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-category {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skills-category h4 {
+    margin-top: 0;
+    color: #495057;
+    font-size: 1.2rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+.skills-list li {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- Project Grid --- */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .project-card {
-    background: white;
-    border-radius: 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
 .project-card h3 {
-    padding: 1rem;
-    font-size: 1.2rem;
+    margin: 1rem 0;
+    border: none;
+    color: #333;
 }
 
-.project-card p {
-    padding: 0 1rem 1rem;
-    color: #555;
-}
-
-/* Detail page */
-.project-detail {
-    background: white;
-    border-radius: 12px;
+/* --- Project Detail Page --- */
+.project-detail-container {
+    background-color: #fff;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.project-detail img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
-.btn {
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Certificates Page (หน้าเกียรติบัตร) --- */
+.awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cert-card-detail {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.cert-card-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cert-card-detail h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    color: #333;
+}
+
+.cert-card-detail ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.cert-card-detail ul li {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.cert-card-thumb {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card-thumb:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cert-card-thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.cert-card-thumb p {
+    margin: 1rem 0;
+    color: #333;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.view-all, .view-more {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-all a, .view-more a {
     display: inline-block;
-    background: #ff9800;
-    color: white;
-    padding: 0.7rem 1.4rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    padding: 0.75rem 2rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background: #e68900;
+.view-all a:hover, .view-more a:hover {
+    background-color: #0056b3;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    nav {
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .profile-section {
         flex-direction: column;
         text-align: center;
     }
-    nav a {
-        margin: 0.5rem 0;
+    .profile-info {
+        text-align: center;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .project-detail-container {
+        padding: 1rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
